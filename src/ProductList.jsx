@@ -26,7 +26,9 @@ function ProductList({ onHomeClick }) {
         }));
     };
 
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    const calculateTotalQuantity = () => {
+        return cart ? cart.reduce((total, item) => total + item.quantity, 0) : 0;
+    };
 
     const plantsArray = [
         {
@@ -295,7 +297,7 @@ function ProductList({ onHomeClick }) {
                     <div>
                         <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
                             <h1 className='cart'>
-                                <span className='cart_quantity_count'>{totalItems}</span>
+                                <span className='cart_quantity_count'>{calculateTotalQuantity()}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
                                     <rect width="156" height="156" fill="none"></rect>
                                     <circle cx="80" cy="216" r="12"></circle>
