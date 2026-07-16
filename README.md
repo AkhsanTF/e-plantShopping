@@ -23,7 +23,7 @@ To run the application locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/<username>/e-plantShopping.git
+   git clone https://github.com/AkhsanTF/e-plantShopping.git
    cd e-plantShopping
    ```
 
