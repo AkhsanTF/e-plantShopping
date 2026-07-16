@@ -22,7 +22,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleCheckoutShopping = (e) => {
-    alert('Functionality to be added for future reference');
+    alert('Coming Soon! Functionality to be added for future reference');
   };
 
   const handleIncrement = (item) => {
@@ -50,6 +50,7 @@ const CartItem = ({ onContinueShopping }) => {
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
+      <h3 style={{ color: 'black' }}>Total Plants: {cart.reduce((total, item) => total + item.quantity, 0)}</h3>
       <div>
         {cart.map(item => (
           <div className="cart-item" key={item.name}>
